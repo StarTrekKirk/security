@@ -1,0 +1,15 @@
+.datalist{
+	margin:15px;
+}
+.datalist-header{
+	padding:0 0 10px 10px;
+}
+td,th{
+	padding:10px;
+}
+th{
+	border-bottom:0.5px solid grey;
+}
+table{
+	border-spacing:0;
+}

@@ -1,0 +1,33 @@
+html,body{
+	width:100%;
+	padding:0;
+	margin:0;
+}
+div{
+	box-sizing:border-box;
+}
+h1{
+	padding-top:10px;
+	text-align: center;
+}
+form{
+	width:500px;
+	height:300px;
+	margin:auto;
+	border:1px solid #eeeeee;
+	padding:50px 125px;
+	box-sizing:border-box;
+}
+.content{
+	padding:20px;
+}
+.item{
+	padding:10px;
+}
+button{
+	width:200px;
+}
+#callback{
+	text-align: center;
+	color:red;
+}
