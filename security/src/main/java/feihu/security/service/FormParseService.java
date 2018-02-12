@@ -103,15 +103,18 @@ public class FormParseService {
 		property.put("name", "permission");
 		property.put("caption", "权限");
 		property.put("type", "checkbox");
-		property.put("options", Permission.getgetPermissionOperatesOptions());
-		Map<String, Integer> operates = Permission.getPermissionOperates();
+		Permission[] ps = Permission.values();
+		String[] options = new String[ps.length];
+		property.put("options", options);
 		int permission = role.getPermission();
 		List<Integer> permissions = new ArrayList<Integer>(10);
-		for (Map.Entry<String, Integer> operate : operates.entrySet()) {
-			Integer value = operate.getValue();
+		int i = 0;
+		for (Permission p : ps) {
+			Integer value = p.getValue();
 			if ((permission & value) == value) {
 				permissions.add(value);
 			}
+			options[i++] = p.getKey() + ":" + value;
 		}
 		property.put("value", permissions);
 		meta.add(property);

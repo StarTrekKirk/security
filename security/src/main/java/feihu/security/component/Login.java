@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
 
 import feihu.security.entity.Account;
+import feihu.security.entity.Permission;
 import feihu.security.entity.Role;
 import feihu.security.service.AccountService;
 import feihu.security.service.AuthService;
@@ -22,7 +23,7 @@ import feihu.security.service.AuthService;
 @Component
 @Scope(value = WebApplicationContext.SCOPE_SESSION, proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class Login {
-	
+
 	public static final int login_status_success = 0;
 
 	public static final int login_status_disabled = 1;
@@ -85,11 +86,34 @@ public class Login {
 		return authService.isAdmin(user);
 	}
 
-	public int getPermission(String user) {
+	public int getPermission() {
 		if (user == null) {
 			return 0;
 		}
 		return authService.getPermission(user);
+	}
+
+	public boolean hasPermission(int permission) {
+		if (user == null) {
+			return false;
+		}
+		return authService.hasPermission_user(user, permission);
+	}
+
+	public boolean checkPermission(Permission permission) {
+		return checkPermission(permission, true);
+	}
+
+	public boolean checkPermission(Permission permission, boolean isThrow) {
+		boolean check = hasPermission(permission.getValue());
+		if (isThrow) {
+			if (!check)
+				throw new RuntimeException("用户[" + user + "]沒有" + permission.getKey() + "权限");
+			return check;
+		}
+		else {
+			return check;
+		}
 	}
 
 	public List<Role> getRoles() {

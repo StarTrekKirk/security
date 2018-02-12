@@ -2,12 +2,14 @@ package feihu.security.control;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,7 +18,6 @@ import feihu.security.component.Login;
 import feihu.security.entity.Account;
 import feihu.security.entity.Permission;
 import feihu.security.service.AccountService;
-import feihu.security.service.AuthService;
 import feihu.security.service.FormParseService;
 import feihu.security.service.ParamService;
 
@@ -29,10 +30,7 @@ import feihu.security.service.ParamService;
 public class ActionAccount {
 
 	@Autowired
-	private AccountService accountService;
-
-	@Autowired
-	private AuthService aService;
+	private AccountService aService;
 
 	@Autowired
 	private Login login;
@@ -43,13 +41,20 @@ public class ActionAccount {
 	@Autowired
 	private ParamService pService;
 
+	@ModelAttribute
+	public void preparePermission(Model model) {
+		Map<String, Boolean> permissions = new HashMap<String, Boolean>(4);
+		permissions.put("add", login.checkPermission(Permission.P_ADD_USER, false));
+		permissions.put("remove", login.checkPermission(Permission.P_REMOVE_USER, false));
+		permissions.put("update", login.checkPermission(Permission.P_UPDATE_USER, false));
+		permissions.put("query", login.checkPermission(Permission.P_QUERY_USER, false));
+		model.addAttribute("permissions", permissions);
+	}
+
 	@RequestMapping("/accounts")
 	public String getAccounts(Model model) {
-		Account user = login.getUser();
-		if (!aService.hasPermission_user(user.getName(), Permission.P_QUERY_USER)) {
-			return "";
-		}
-		List<Account> accouts = accountService.queryAccounts();
+		login.checkPermission(Permission.P_QUERY_USER);
+		List<Account> accouts = aService.queryAccounts();
 		model.addAttribute("columns", new String[] { "ID", "账户名", "部门", "账号状态", "创建时间" });
 		List<Object[]> data = new ArrayList<Object[]>(accouts.size());
 		for (Account account : accouts) {
@@ -62,11 +67,8 @@ public class ActionAccount {
 
 	@RequestMapping("/account")
 	public String getAccount(@RequestParam(required = false) Integer id, Model model) {
-		Account user = login.getUser();
-		if (!aService.hasPermission_user(user.getName(), Permission.P_QUERY_USER)) {
-			return "";
-		}
-		Account account = (id == null ? new Account() : accountService.queryAccount(id));
+		login.checkPermission(Permission.P_QUERY_USER);
+		Account account = (id == null ? new Account() : aService.queryAccount(id));
 		List<Map<String, Object>> fields = Collections.emptyList();
 		try {
 			fields = fService.parseAccount(account);
@@ -89,19 +91,14 @@ public class ActionAccount {
 	@RequestMapping("/saveAccount")
 	public int saveAccount(Account account, String role) {
 		List<Integer> roles = pService.getIds(role);
-		Account user = login.getUser();
 		int id = account.getId();
 		if (id == 0) {//新增
-			if (!aService.hasPermission_user(user.getName(), Permission.P_ADD_USER)) {
-				return 0;
-			}
-			return accountService.addAccount(account, roles);
+			login.checkPermission(Permission.P_ADD_USER);
+			return aService.addAccount(account, roles);
 		}
 		else {//更新
-			if (!aService.hasPermission_user(user.getName(), Permission.P_UPDATE_USER)) {
-				return 0;
-			}
-			return accountService.updateAccount(account, roles);
+			login.checkPermission(Permission.P_UPDATE_USER);
+			return aService.updateAccount(account, roles);
 		}
 	}
 
@@ -112,10 +109,7 @@ public class ActionAccount {
 		if (id == null) {
 			return 0;
 		}
-		Account user = login.getUser();
-		if (!aService.hasPermission_user(user.getName(), Permission.P_REMOVE_USER)) {
-			return 0;
-		}
-		return accountService.deleteAccount(ids);
+		login.checkPermission(Permission.P_REMOVE_USER);
+		return aService.deleteAccount(ids);
 	}
 }

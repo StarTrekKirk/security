@@ -39,36 +39,53 @@
 <#macro datalist columns data>
 	<div class="datalist">
 		<div class="datalist-header">
+			<#if permissions.add>
+				<button id="add">新增</button>
+			</#if>
+			<#if permissions.remove>
+				<button id="remove">删除</button>
+			</#if>
 			<#nested>
 		</div>
 		<div class="datalist-table">
 			<table>
 				<thead>
 					<tr>
-						<th>
-							<input class="datalist-selector-all" type="checkbox">
-						</th>
+						<#if permissions.remove>
+							<th>
+								<input class="datalist-selector-all" type="checkbox">
+							</th>
+						</#if>
 						<#list columns as column>
 							<th>${column}</th>
 						</#list>
-						<th colspan=2>操作选项</th>
+						<#if permissions.remove || permissions.update>
+							<th colspan=2>操作选项</th>
+						</#if>
 					</tr>
 				</thead>
 				<tbody>
 					<#list data as row>
 						<tr>
-							<td>
-								<input class="datalist-selector" type="checkbox">
-							</td>
+							
+							<#if permissions.remove>
+								<td>
+									<input class="datalist-selector" type="checkbox">
+								</td>
+							</#if>
 							<#list row as item>
 								<td>${item}</td>
 							</#list>
-							<td>
-								<a class="datalist-edit" href="javascript:void(0)">编辑</a>
-							</td>
-							<td>
-								<a class="datalist-remove"  href="javascript:void(0)">删除</a>
-							</td>
+							<#if permissions.update>
+								<td>
+									<a class="datalist-edit" href="javascript:void(0)">编辑</a>
+								</td>
+							</#if>
+							<#if permissions.remove>
+								<td>
+									<a class="datalist-remove"  href="javascript:void(0)">删除</a>
+								</td>
+							</#if>
 						</tr>
 					</#list>
 				</tbody>

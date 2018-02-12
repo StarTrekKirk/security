@@ -45,5 +45,6 @@ public class ControlIntercept {
 			model.addAttribute("user", user.getName());
 		}
 		model.addAttribute("ctx", "/app");
+		model.addAttribute("login", login);
 	}
 }
