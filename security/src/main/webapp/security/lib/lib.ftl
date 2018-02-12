@@ -19,6 +19,7 @@
 		<body>
 			<div class="header">
 				<span class="header-before">
+					<a class="header-home" href="${ctx}/home">home</a>
 					<span class="header-flag">当前位置:</span>
 					<span class="header-location">${location}</span>
 				</span>

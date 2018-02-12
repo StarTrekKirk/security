@@ -13,6 +13,14 @@ div{
 	border:0;
 	border-bottom:0.5px solid grey;
 }
+.header-home{
+	display:inline-block;
+	color:transparent;
+	width:16px;
+	height:16px;
+	background:url(/app/image/home.png) no-repeat scroll center;
+	cursor:pointer;
+}
 .header-flag{
 	font-size:16px;
 	padding:0 5px;

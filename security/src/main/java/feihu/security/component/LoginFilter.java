@@ -37,7 +37,8 @@ public class LoginFilter implements Filter {
 
 	private boolean isStatic(HttpServletRequest req) {
 		String uri = req.getRequestURI();
-		return uri.indexOf(".css") != -1 || uri.indexOf(".js") != -1 || uri.indexOf(".html") != -1;
+		return uri.indexOf(".css") != -1 || uri.indexOf(".js") != -1 || uri.indexOf(".html") != -1
+				|| uri.indexOf(".png") != -1;
 	}
 
 	private boolean isLoginPage(HttpServletRequest req) {
