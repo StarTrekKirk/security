@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="feihu.security.mapper.RoleMapper">
+	<cache></cache>
+	<insert id="addRole" parameterType="Role">
+		insert into role(name,permission) value(#{name},#{permission})
+	</insert>  
+	<update id="updateRole" parameterType="Role">  
+		update role set name=#{name},permission=#{permission} where id=#{id}
+	</update>  
+	<delete id="deleteRole" parameterType="int">
+		delete from role where id=#{_parameter}
+	</delete>
+	<delete id="deleteRoles">
+		delete from role where id in
+		<foreach collection="list" item="item" index="index" open="(" separator="," close=")">
+			#{item}
+		</foreach>
+	</delete>
+	<select id="queryRoleById" parameterType="int" resultType="Role">
+		select id,name,createtime,permission from role where id=#{id}
+	</select>  
+	<select id="queryRole" parameterType="String" resultType="Role">
+		select id,name,createtime,permission from role where name=#{name}
+	</select> 
+	<select id="queryRoles" resultType="Role">
+		select id,name,createtime,permission from role
+	</select>
+</mapper>

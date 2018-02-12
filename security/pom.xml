@@ -3,11 +3,17 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>feihu</groupId>
-	<artifactId>audition</artifactId>
+	<artifactId>security</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
+	<developers>
+		<developer>
+			<name>heihuhu</name>
+			<email>wangziran1205@126.com</email>
+		</developer>
+	</developers>
 
-	<name>audition</name>
+	<name>security</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>

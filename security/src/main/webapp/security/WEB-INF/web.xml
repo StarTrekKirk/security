@@ -4,8 +4,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
 	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-	<display-name>feihu app</display-name>
-	<description>feihu app</description>
+	<display-name>security</display-name>
+	<description>security</description>
 	<context-param>  
 		<param-name>contextConfigLocation</param-name>  
 		<param-value>classpath:applicationContext.xml</param-value>
@@ -15,9 +15,6 @@
 	</listener>
 	<listener>  
 		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>  
-	</listener>  
-	<listener>  
-		<listener-class>feihu.audition.control.ServerInfoListener</listener-class>  
 	</listener>  
 	<filter>
 		<filter-name>characterEncodingFilter</filter-name>  
@@ -36,11 +33,11 @@
 		<url-pattern>/*</url-pattern>  
 	</filter-mapping>
 	<filter>  
-		<filter-name>loginfilter</filter-name>  
+		<filter-name>loginFilter</filter-name>  
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>  
 	</filter>
 	<filter-mapping>  
-		<filter-name>loginfilter</filter-name>  
+		<filter-name>loginFilter</filter-name>  
 		<url-pattern>/*</url-pattern>  
 	</filter-mapping>
 	<servlet>

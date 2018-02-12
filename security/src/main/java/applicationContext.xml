@@ -14,7 +14,7 @@
 	http://www.springframework.org/schema/tx    
 	http://www.springframework.org/schema/tx/spring-tx.xsd">
 	<context:annotation-config/>
-	<context:component-scan base-package="feihu.audition">
+	<context:component-scan base-package="feihu.security">
 		<context:exclude-filter type="regex" expression=".control.*"/>
 	</context:component-scan>
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
@@ -33,7 +33,7 @@
 		<property name="configLocation" value="classpath:mybatis-config.xml" />   
 	</bean>
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
-		<property name="basePackage" value="feihu.audition.mapper"></property>  
+		<property name="basePackage" value="feihu.security.mapper"></property>  
 		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>  
 	</bean>
 	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">  

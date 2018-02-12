@@ -25,7 +25,7 @@
 	<classpathentry kind="lib" path="D:/succezIDE/jar/spring-framework-5.0.2.RELEASE/libs/spring-aop-5.0.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="D:/succezIDE/jar/spring-framework-5.0.2.RELEASE/libs/spring-aspects-5.0.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="D:/succezIDE/jar/spring-framework-5.0.2.RELEASE/libs/spring-beans-5.0.2.RELEASE.jar"/>
-	<classpathentry kind="lib" path="D:/succezIDE/jar/spring-framework-5.0.2.RELEASE/libs/spring-context-5.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/succezIDE/jar/spring-framework-5.0.2.RELEASE/libs/spring-context-5.0.2.RELEASE.jar" sourcepath="D:/succezIDE/jar/spring-framework-5.0.2.RELEASE/libs/spring-context-5.0.2.RELEASE-sources.jar"/>
 	<classpathentry kind="lib" path="D:/succezIDE/jar/spring-framework-5.0.2.RELEASE/libs/spring-core-5.0.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="D:/succezIDE/jar/spring-framework-5.0.2.RELEASE/libs/spring-web-5.0.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="D:/succezIDE/jar/spring-framework-5.0.2.RELEASE/libs/spring-webmvc-5.0.2.RELEASE.jar"/>
