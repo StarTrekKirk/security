@@ -8,10 +8,19 @@ security主要实现了如下功能：
 4. 权限查看功能
 ## 页面展示
 ### 登录页面
+![login](https://github.com/StarTrekKirk/security/blob/master/login.png)
 ### 主页面
+![home](https://github.com/StarTrekKirk/security/blob/master/home.png)
 ### 用户管理页面
+![users](https://github.com/StarTrekKirk/security/blob/master/users.png)
+
+![user](https://github.com/StarTrekKirk/security/blob/master/user.png)
 ### 角色管理页面
+![roles](https://github.com/StarTrekKirk/security/blob/master/roles.png)
+
+![role](https://github.com/StarTrekKirk/security/blob/master/role.png)
 ### 权限查询页面
+![permission](https://github.com/StarTrekKirk/security/blob/master/permission.png)
 
 ## 项目架构
 security采用经典的mvc架构实现，使用了spring、springmvc、mybatis、freemarker、jquery。具体的
