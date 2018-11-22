@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import feihu.security.dao.RoleDao;
-import feihu.security.entity.Role;
+import feihu.security.dao.entity.Role;
 
 /**
  * 角色服务类，提供角色增删改查功能
@@ -18,7 +18,6 @@ import feihu.security.entity.Role;
 public class RoleService {
 
 	@Autowired
-	@Qualifier("roleMapper")
 	private RoleDao dao;
 
 	public Role queryRole(String name) {

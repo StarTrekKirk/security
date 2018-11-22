@@ -10,10 +10,10 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import feihu.security.annotation.Form;
-import feihu.security.entity.Account;
-import feihu.security.entity.Permission;
-import feihu.security.entity.Role;
+import feihu.security.tool.annotation.Form;
+import feihu.security.dao.entity.Account;
+import feihu.security.dao.entity.Permission;
+import feihu.security.dao.entity.Role;
 
 /**
  * 表单内容解析服务
@@ -34,7 +34,7 @@ public class FormParseService {
 
 	private Map<String, Object> parseField(Field field, Object form) throws IllegalArgumentException,
 			IllegalAccessException {
-		feihu.security.annotation.Field annotation = field.getAnnotation(feihu.security.annotation.Field.class);
+		feihu.security.tool.annotation.Field annotation = field.getAnnotation(feihu.security.tool.annotation.Field.class);
 		if (annotation == null) {
 			return null;
 		}

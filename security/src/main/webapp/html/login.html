@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>login</title>
+		<meta charset="utf-8">
+		<meta ctx="">
+		<link rel="stylesheet" type="text/css" href="/css/login.css"/>
+		<script type="text/javascript" src="/js/jquery-3.2.1.js"></script>
+		<script type="text/javascript" src="/js/html.js"></script>
+	</head>
+	<body>
+		<div>
+			<div><h1>请登录</h1></div>
+			<div class="content">
+				<form action="/audition/login" method="post" enctype="application/x-www-form-urlencoded">
+					<div class="item">
+						<span id="callback"></span>
+					</div>
+					<div class="item">
+					账号:<input name="name" type="input">
+					</div>
+					<div class="item">
+					密码:<input name="password" type="password">
+					</div>
+					<div class="item">
+					<button type="button">登录</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript" src="/js/login.js"></script>
+	</body>
+</html>

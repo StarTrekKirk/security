@@ -25,7 +25,6 @@ public class LoginFilter implements Filter {
 	@Autowired
 	private Login loginService;
 
-	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 		// TODO Auto-generated method stub
 
@@ -60,7 +59,6 @@ public class LoginFilter implements Filter {
 		return uri.substring(index + "returnUrl=".length());
 	}
 
-	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException,
 			ServletException {
 		HttpServletRequest req = (HttpServletRequest) request;
@@ -88,7 +86,6 @@ public class LoginFilter implements Filter {
 		}
 	}
 
-	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub
 

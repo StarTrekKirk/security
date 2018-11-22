@@ -1,0 +1,42 @@
+html,body{
+	width:100%;
+	padding:0;
+	margin:0;
+	font-size:14px;
+}
+div{
+	box-sizing:border-box;
+}
+.header{
+	margin:10px 15px;
+	padding-bottom:10px;
+	border:0;
+	border-bottom:0.5px solid grey;
+}
+.header-home{
+	display:inline-block;
+	color:transparent;
+	width:16px;
+	height:16px;
+	background:url(/image/home.png) no-repeat scroll center;
+	cursor:pointer;
+}
+.header-flag{
+	font-size:16px;
+	padding:0 5px;
+}
+.header-location{
+	font-size:14px;
+}
+.header-user{
+	font-size:14px;
+}
+.header-logout{
+	font-size:14px;
+	padding:0 5px;
+}
+.header-before{
+}
+.header-after{
+	float:right;
+}

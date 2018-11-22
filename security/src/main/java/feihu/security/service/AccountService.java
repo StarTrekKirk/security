@@ -12,8 +12,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import feihu.security.dao.AccountDao;
 import feihu.security.dao.AccountRoleDao;
-import feihu.security.entity.Account;
-import feihu.security.entity.Role;
+import feihu.security.dao.entity.Account;
+import feihu.security.dao.entity.Role;
 
 /**
  * 账户服务类，提供账户增删改查功能
@@ -24,11 +24,9 @@ import feihu.security.entity.Role;
 public class AccountService {
 
 	@Autowired
-	@Qualifier("accountMapper")
 	private AccountDao aDao;
 
 	@Autowired
-	@Qualifier("accountRoleMapper")
 	private AccountRoleDao ardao;
 
 	public Account queryAccount(int id) {

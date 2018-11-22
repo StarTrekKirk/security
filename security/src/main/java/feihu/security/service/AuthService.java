@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import feihu.security.dao.AccountRoleDao;
-import feihu.security.entity.Account;
-import feihu.security.entity.Role;
+import feihu.security.dao.entity.Account;
+import feihu.security.dao.entity.Role;
 
 /**
  * 权限验证服务
@@ -27,7 +27,6 @@ public class AuthService {
 	private RoleService roleService;
 
 	@Autowired
-	@Qualifier("accountRoleMapper")
 	private AccountRoleDao dao;
 
 	public boolean isAdmin(String user) {
