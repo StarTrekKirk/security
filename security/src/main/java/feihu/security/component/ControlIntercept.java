@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
-import feihu.security.dao.entity.Account;
+import feihu.security.entity.Account;
 
 /**
  * 用于给controller添加公共的model属性

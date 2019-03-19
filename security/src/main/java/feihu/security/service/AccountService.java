@@ -6,14 +6,13 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import feihu.security.dao.AccountDao;
 import feihu.security.dao.AccountRoleDao;
-import feihu.security.dao.entity.Account;
-import feihu.security.dao.entity.Role;
+import feihu.security.entity.Account;
+import feihu.security.entity.Role;
 
 /**
  * 账户服务类，提供账户增删改查功能

@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import feihu.security.component.Login;
-import feihu.security.dao.entity.Permission;
-import feihu.security.dao.entity.Role;
+import feihu.security.entity.Permission;
+import feihu.security.entity.Role;
 import feihu.security.service.FormParseService;
 import feihu.security.service.ParamService;
 import feihu.security.service.RoleService;

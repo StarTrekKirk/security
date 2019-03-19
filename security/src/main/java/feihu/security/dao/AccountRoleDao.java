@@ -3,8 +3,8 @@ package feihu.security.dao;
 import java.util.List;
 import java.util.Map;
 
-import feihu.security.dao.entity.Account;
-import feihu.security.dao.entity.Role;
+import feihu.security.entity.Account;
+import feihu.security.entity.Role;
 import org.springframework.stereotype.Repository;
 
 /**

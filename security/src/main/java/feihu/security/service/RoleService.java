@@ -3,11 +3,10 @@ package feihu.security.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import feihu.security.dao.RoleDao;
-import feihu.security.dao.entity.Role;
+import feihu.security.entity.Role;
 
 /**
  * 角色服务类，提供角色增删改查功能

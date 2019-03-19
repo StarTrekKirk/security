@@ -11,9 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import feihu.security.tool.annotation.Form;
-import feihu.security.dao.entity.Account;
-import feihu.security.dao.entity.Permission;
-import feihu.security.dao.entity.Role;
+import feihu.security.entity.Account;
+import feihu.security.entity.Permission;
+import feihu.security.entity.Role;
 
 /**
  * 表单内容解析服务

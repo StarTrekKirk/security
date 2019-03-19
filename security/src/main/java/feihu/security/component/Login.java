@@ -9,9 +9,9 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
 
-import feihu.security.dao.entity.Account;
-import feihu.security.dao.entity.Permission;
-import feihu.security.dao.entity.Role;
+import feihu.security.entity.Account;
+import feihu.security.entity.Permission;
+import feihu.security.entity.Role;
 import feihu.security.service.AccountService;
 import feihu.security.service.AuthService;
 

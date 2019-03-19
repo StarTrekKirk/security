@@ -9,7 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import feihu.security.component.Login;
-import feihu.security.dao.entity.Permission;
+import feihu.security.entity.Permission;
 
 /**
  * 系统主页

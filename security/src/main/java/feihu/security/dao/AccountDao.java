@@ -2,7 +2,7 @@ package feihu.security.dao;
 
 import java.util.List;
 
-import feihu.security.dao.entity.Account;
+import feihu.security.entity.Account;
 import org.springframework.stereotype.Repository;
 
 /**

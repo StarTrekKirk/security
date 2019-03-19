@@ -1,4 +1,4 @@
-package feihu.security.dao.entity;
+package feihu.security.entity;
 
 import java.io.Serializable;
 import java.util.Date;

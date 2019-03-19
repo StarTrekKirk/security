@@ -9,7 +9,7 @@
 		<setting name="multipleResultSetsEnabled" value="true"/>  
 	</settings>  
 	<typeAliases>  
-		<typeAlias alias="Account" type="feihu.security.dao.entity.Account" />
-		<typeAlias alias="Role" type="feihu.security.dao.entity.Role" />
+		<typeAlias alias="Account" type="feihu.security.entity.Account" />
+		<typeAlias alias="Role" type="feihu.security.entity.Role" />
 	</typeAliases> 
 </configuration>

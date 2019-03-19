@@ -1,4 +1,4 @@
-package feihu.security.dao.entity;
+package feihu.security.entity;
 
 /**
  * 权限列表

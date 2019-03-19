@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import feihu.security.component.Login;
-import feihu.security.dao.entity.Permission;
+import feihu.security.entity.Permission;
 
 /**
  * 提供权限列表查看界面
