@@ -54,6 +54,7 @@ security采用经典的mvc架构实现，使用了spring、springmvc、mybatis�
 | rid   | int(11) | NO   | PRI | NULL    |                | 
 
 权限是程序内预定的，不能增删改
+建库脚本见[db.sql](https://github.com/StarTrekKirk/security/blob/master/db.sql)
 ### 应用
 服务器应用逻辑，通过springmvc实现，通过spring将springmvc、mybatis、freemarker集成在一起
 ### 视图
