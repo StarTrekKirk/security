@@ -53,32 +53,16 @@
 		<servlet-name>springmvc</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>default</servlet-name>
-		<url-pattern>*.html</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>default</servlet-name>
-		<url-pattern>*.css</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>default</servlet-name>
-		<url-pattern>*.js</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>default</servlet-name>
-		<url-pattern>*.png</url-pattern>
-	</servlet-mapping>
 	<welcome-file-list>
-		<welcome-file>/index.html</welcome-file>
+		<welcome-file>/WEB-INF/index.html</welcome-file>
 	</welcome-file-list>
 	<error-page>
 		<error-code>404</error-code>
-		<location>/notfound.html</location>
+		<location>/WEB-INF/notfound.html</location>
 	</error-page>
 	<error-page>
 		<exception-type>java.lang.NullPointerException</exception-type>
-		<location>/error.html</location>
+		<location>/WEB-INF/error.html</location>
 	</error-page>
 	<mime-mapping>
 		<extension>css</extension>

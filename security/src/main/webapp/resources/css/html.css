@@ -18,7 +18,7 @@ div{
 	color:transparent;
 	width:16px;
 	height:16px;
-	background:url(/image/home.png) no-repeat scroll center;
+	background:url(/resources/image/home.png) no-repeat scroll center;
 	cursor:pointer;
 }
 .header-flag{

@@ -42,7 +42,7 @@ public class LoginFilter implements Filter {
 
 	private boolean isLoginPage(HttpServletRequest req) {
 		String uri = req.getRequestURI();
-		return uri.indexOf("/html/login.html") != -1;
+		return uri.indexOf("/resources/html/login.html") != -1;
 	}
 
 	private boolean isLoginUri(HttpServletRequest req) {
@@ -80,7 +80,7 @@ public class LoginFilter implements Filter {
 			else {
 				String uri = req.getRequestURI();
 				String queryString = req.getQueryString();
-				res.sendRedirect(res.encodeRedirectURL(req.getContextPath() + "/html/login.html?returnUrl=" + uri
+				res.sendRedirect(res.encodeRedirectURL(req.getContextPath() + "/resources/html/login.html?returnUrl=" + uri
 						+ (queryString == null ? "" : "?" + queryString)));
 			}
 		}

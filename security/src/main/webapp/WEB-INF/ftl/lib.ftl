@@ -9,12 +9,12 @@
 			<meta name="renderer" content="webkit|ie-comp|ie-stand">
 			<meta http-equiv="content-Type" content="text/html charset=UTF-8">
 			<meta name="author" content="feihu">
-			<link type="text/css" rel="stylesheet" href="${ctx}/css/html.css"></script>
+			<link type="text/css" rel="stylesheet" href="${ctx}/resources/css/html.css"></script>
 			<#list csses as css>
 				<link type="text/css" rel="stylesheet" href="${ctx}${css}"></script>
 			</#list>
-			<script type="text/javascript" src="/js/jquery-3.2.1.js"></script>
-			<script type="text/javascript" src="${ctx}/js/html.js"></script>
+			<script type="text/javascript" src="${ctx}/resources/js/jquery-3.2.1.js"></script>
+			<script type="text/javascript" src="${ctx}/resources/js/html.js"></script>
 		</head>
 		<body>
 			<div class="header">

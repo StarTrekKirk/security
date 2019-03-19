@@ -10,18 +10,18 @@
 #usersettings{
 	width:128px;
 	height:128px;
-	background:url(/image/user.png) no-repeat scroll center;
+	background:url(/resources/image/user.png) no-repeat scroll center;
 	cursor:pointer;
 }
 #rolesettings{
 	width:128px;
 	height:128px;
-	background:url(/image/role.png) no-repeat scroll center;
+	background:url(/resources/image/role.png) no-repeat scroll center;
 	cursor:pointer;
 }
 #permissionsettings{
 	width:128px;
 	height:128px;
-	background:url(/image/permission.png) no-repeat scroll center;
+	background:url(/resources/image/permission.png) no-repeat scroll center;
 	cursor:pointer;
 }

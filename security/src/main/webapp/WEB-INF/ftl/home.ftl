@@ -1,5 +1,5 @@
-<#import "/lib.ftl" as lib>
-<@lib.html title="主页" location="主页" csses=["/css/home.css"]>
+<#import "lib.ftl" as lib>
+<@lib.html title="主页" location="主页" csses=["/resources/css/home.css"]>
 	<div id="content">
 		<span>
 			<#if permissions.queryuser>

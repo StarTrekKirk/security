@@ -47,7 +47,7 @@ public class LoginController {
 		}
 		else {
 			session.invalidate();
-			resp.sendRedirect(req.getContextPath() + "/html/login.html");
+			resp.sendRedirect(req.getContextPath() + "/resources/html/login.html");
 		}
 	}
 

@@ -23,7 +23,7 @@
 	</bean>
 	<aop:aspectj-autoproxy proxy-target-class="true" />
 	<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
-		<property name="templateLoaderPaths" value="/ftl,/lib" />
+		<property name="templateLoaderPaths" value="/WEB-INF/ftl" />
 		<property name="freemarkerSettings">
 			<props>    
 				<prop key="template_update_delay">0</prop>
@@ -43,4 +43,7 @@
 		<property name="suffix" value="" />
 		<property name="order" value="2"/>
 	</bean>
+
+	<!--<mvc:default-servlet-handler />-->
+	<mvc:resources mapping="/resources/**" location="/resources/" />
 </beans>
